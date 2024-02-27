@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Lógico</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="title"> Fila do Banco</div>
+    <div class="description">Cinco homens estão na fila do banco, em sequência, esperando serem atendidos para pagar
+        uma conta. Cada um tem uma conta, uma profissão, um esporte favorito e um animal de estimação.
+        <p>Use a lógica para encontrar as características de cada um deles.</p>
+    </div>
+
+    <div class="section-select">
+
+        <div class="temas">
+            <span>COR</span>
+            <span>CONTA</span>
+            <span>NOME</span>
+            <span>ANIMAL</span>
+            <span>PROFISSÃO</span>
+            <span>ESPORTE</span>
+        </div>
+
+        <div class="selecao" id="background-selecao">
+            <div class="title-select">1° Homem</div>
+            <ul onchange="verificar()">
+                <li>
+                    <select id="corSelect">
+                        <option value="-1"></option>
+                        <option value="0">Amarela</option>
+                        <option value="1">Azul</option>
+                        <option value="2">Branca</option>
+                        <option value="3">Verde</option>
+                        <option value="4">Vermelha</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="contaSelect">
+                        <option value="-1"></option>
+                        <option value="0">Água</option>
+                        <option value="1">Aluguel</option>
+                        <option value="2">Celular</option>
+                        <option value="3">Luz</option>
+                        <option value="4">Telefone</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="nomeSelect">
+                        <option value="-1"></option>
+                        <option value="0">Augusto</option>
+                        <option value="1">Douglas</option>
+                        <option value="2">José</option>
+                        <option value="3">Ronaldo</option>
+                        <option value="4">Samuel</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="animalSelect">
+                        <option value="-1"></option>
+                        <option value="0">Cachorro</option>
+                        <option value="1">Gato</option>
+                        <option value="2">Pássaro</option>
+                        <option value="3">Peixe</option>
+                        <option value="4">Tartaruga</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="profissaoSelect">
+                        <option value="-1"></option>
+                        <option value="0">Bombeiro</option>
+                        <option value="1">Fotógrafo</option>
+                        <option value="2">Massagista</option>
+                        <option value="3">Pesquisador</option>
+                        <option value="4">Veterinário</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="esporteSelect">
+                        <option value="-1"></option>
+                        <option value="0">Basquete</option>
+                        <option value="1">Futebol</option>
+                        <option value="2">Sinuca</option>
+                        <option value="3">Natação</option>
+                        <option value="4">Vôlei</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="selecao" id="background-selecao2">
+            <div class="title-select">2° Homem</div>
+            <ul onchange="verificar2()">
+                <li>
+                    <select id="corSelect2">
+                        <option value="-1"></option>
+                        <option value="0">Amarela</option>
+                        <option value="1">Azul</option>
+                        <option value="2">Branca</option>
+                        <option value="3">Verde</option>
+                        <option value="4">Vermelha</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="contaSelect2">
+                        <option value="-1"></option>
+                        <option value="0">Água</option>
+                        <option value="1">Aluguel</option>
+                        <option value="2">Celular</option>
+                        <option value="3">Luz</option>
+                        <option value="4">Telefone</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="nomeSelect2">
+                        <option value="-1"></option>
+                        <option value="0">Augusto</option>
+                        <option value="1">Douglas</option>
+                        <option value="2">José</option>
+                        <option value="3">Ronaldo</option>
+                        <option value="4">Samuel</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="animalSelect2">
+                        <option value="-1"></option>
+                        <option value="0">Cachorro</option>
+                        <option value="1">Gato</option>
+                        <option value="2">Pássaro</option>
+                        <option value="3">Peixe</option>
+                        <option value="4">Tartaruga</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="profissaoSelect2">
+                        <option value="-1"></option>
+                        <option value="0">Bombeiro</option>
+                        <option value="1">Fotógrafo</option>
+                        <option value="2">Massagista</option>
+                        <option value="3">Pesquisador</option>
+                        <option value="4">Veterinário</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="esporteSelect2">
+                        <option value="-1"></option>
+                        <option value="0">Basquete</option>
+                        <option value="1">Futebol</option>
+                        <option value="2">Sinuca</option>
+                        <option value="3">Natação</option>
+                        <option value="4">Vôlei</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="selecao" id="background-selecao3">
+            <div class="title-select">3° Homem</div>
+            <ul onchange="verificar3()">
+                <li>
+                    <select id="corSelect3">
+                        <option value="-1"></option>
+                        <option value="0">Amarela</option>
+                        <option value="1">Azul</option>
+                        <option value="2">Branca</option>
+                        <option value="3">Verde</option>
+                        <option value="4">Vermelha</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="contaSelect3">
+                        <option value="-1"></option>
+                        <option value="0">Água</option>
+                        <option value="1">Aluguel</option>
+                        <option value="2">Celular</option>
+                        <option value="3">Luz</option>
+                        <option value="4">Telefone</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="nomeSelect3">
+                        <option value="-1"></option>
+                        <option value="0">Augusto</option>
+                        <option value="1">Douglas</option>
+                        <option value="2">José</option>
+                        <option value="3">Ronaldo</option>
+                        <option value="4">Samuel</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="animalSelect3">
+                        <option value="-1"></option>
+                        <option value="0">Cachorro</option>
+                        <option value="1">Gato</option>
+                        <option value="2">Pássaro</option>
+                        <option value="3">Peixe</option>
+                        <option value="4">Tartaruga</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="profissaoSelect3">
+                        <option value="-1"></option>
+                        <option value="0">Bombeiro</option>
+                        <option value="1">Fotógrafo</option>
+                        <option value="2">Massagista</option>
+                        <option value="3">Pesquisador</option>
+                        <option value="4">Veterinário</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="esporteSelect3">
+                        <option value="-1"></option>
+                        <option value="0">Basquete</option>
+                        <option value="1">Futebol</option>
+                        <option value="2">Sinuca</option>
+                        <option value="3">Natação</option>
+                        <option value="4">Vôlei</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="selecao" id="background-selecao4">
+            <div class="title-select">4° Homem</div>
+            <ul onchange="verificar4()">
+                <li>
+                    <select id="corSelect4">
+                        <option value="-1"></option>
+                        <option value="0">Amarela</option>
+                        <option value="1">Azul</option>
+                        <option value="2">Branca</option>
+                        <option value="3">Verde</option>
+                        <option value="4">Vermelha</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="contaSelect4">
+                        <option value="-1"></option>
+                        <option value="0">Água</option>
+                        <option value="1">Aluguel</option>
+                        <option value="2">Celular</option>
+                        <option value="3">Luz</option>
+                        <option value="4">Telefone</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="nomeSelect4">
+                        <option value="-1"></option>
+                        <option value="0">Augusto</option>
+                        <option value="1">Douglas</option>
+                        <option value="2">José</option>
+                        <option value="3">Ronaldo</option>
+                        <option value="4">Samuel</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="animalSelect4">
+                        <option value="-1"></option>
+                        <option value="0">Cachorro</option>
+                        <option value="1">Gato</option>
+                        <option value="2">Pássaro</option>
+                        <option value="3">Peixe</option>
+                        <option value="4">Tartaruga</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="profissaoSelect4">
+                        <option value="-1"></option>
+                        <option value="0">Bombeiro</option>
+                        <option value="1">Fotógrafo</option>
+                        <option value="2">Massagista</option>
+                        <option value="3">Pesquisador</option>
+                        <option value="4">Veterinário</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="esporteSelect4">
+                        <option value="-1"></option>
+                        <option value="0">Basquete</option>
+                        <option value="1">Futebol</option>
+                        <option value="2">Sinuca</option>
+                        <option value="3">Natação</option>
+                        <option value="4">Vôlei</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="selecao" id="background-selecao5">
+            <div class="title-select">5° Homem</div>
+            <ul onchange="verificar5()">
+                <li>
+                    <select id="corSelect5">
+                        <option value="-1"></option>
+                        <option value="0">Amarela</option>
+                        <option value="1">Azul</option>
+                        <option value="2">Branca</option>
+                        <option value="3">Verde</option>
+                        <option value="4">Vermelha</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="contaSelect5">
+                        <option value="-1"></option>
+                        <option value="0">Água</option>
+                        <option value="1">Aluguel</option>
+                        <option value="2">Celular</option>
+                        <option value="3">Luz</option>
+                        <option value="4">Telefone</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="nomeSelect5">
+                        <option value="-1"></option>
+                        <option value="0">Augusto</option>
+                        <option value="1">Douglas</option>
+                        <option value="2">José</option>
+                        <option value="3">Ronaldo</option>
+                        <option value="4">Samuel</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="animalSelect5">
+                        <option value="-1"></option>
+                        <option value="0">Cachorro</option>
+                        <option value="1">Gato</option>
+                        <option value="2">Pássaro</option>
+                        <option value="3">Peixe</option>
+                        <option value="4">Tartaruga</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="profissaoSelect5">
+                        <option value="-1"></option>
+                        <option value="0">Bombeiro</option>
+                        <option value="1">Fotógrafo</option>
+                        <option value="2">Massagista</option>
+                        <option value="3">Pesquisador</option>
+                        <option value="4">Veterinário</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="esporteSelect5">
+                        <option value="-1"></option>
+                        <option value="0">Basquete</option>
+                        <option value="1">Futebol</option>
+                        <option value="2">Sinuca</option>
+                        <option value="3">Natação</option>
+                        <option value="4">Vôlei</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <ul class="dicas">
+        <li>Na quarta posição está o homem que gosta de Sinuca.</li>
+        <li>Quem gosta de Futebol está na quinta posição.</li>
+        <li>O homem que gosta de Basquete está na segunda posição.</li>
+        <li>Quem gosta de Vôlei está de Vermelho.</li>
+        <li>O dono do Peixe está exatamente à esquerda de quem pratica Natação.</li>
+        <li>O homem de Branco é o dono da Tartaruga.</li>
+        <li>O Bombeiro está exatamente à direita do Samuel.</li>
+        <li>O Veterinário está na quinta posição.</li>
+        <li>O Pesquisador está na terceira posição.</li>
+        <li>Douglas trabalha como Fotógrafo.</li>
+        <li>José está na quinta posição.</li>
+        <li>O Pesquisador está exatamente à esquerda do Augusto.</li>
+        <li>Douglas tem um Cachorro.</li>
+        <li>Na quinta posição está o homem da conta de Telefone.</li>
+        <li>O homem de Branco vai pagar a conta de Água.</li>
+        <li>Na terceira posição está quem vai pagar a conta de Luz.</li>
+        <li>Ronaldo vai pagar a conta de Celular.</li>
+        <li>O homem de Verde tem um Pássaro.</li>
+        <li>O homem de Azul está em uma das pontas.</li>
+        <li>O homem que tem um Gato está exatamente à direita de que gosta de Sinuca.</li>
+        <li>O homem que tem um Pássaro está ao lado do que joga Sinuca.</li>
+    </ul>
+
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
